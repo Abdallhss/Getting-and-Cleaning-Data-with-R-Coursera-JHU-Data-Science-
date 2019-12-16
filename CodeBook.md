@@ -57,4 +57,5 @@ The set of variables that were estimated from these signals are:
 - **std()**: Standard deviation
 
 >> The complete list of variables of each feature vector is available in 'features.txt'
+
 >> The units are all in SI format.
