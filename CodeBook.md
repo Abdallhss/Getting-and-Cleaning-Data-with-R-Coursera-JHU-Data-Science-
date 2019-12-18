@@ -59,3 +59,13 @@ The set of variables that were estimated from these signals are:
 >> The complete list of variables of each feature vector is available in 'features.txt'
 
 >> The units are all in SI format.
+
+
+# Code Analysis
+
+1) We read in the features_names and the activity_labels through read.csv with space seperator.
+2) We create a function that reads in the features (X) and labels(y) as well as the subjects (subject) and then bind them using "cbind" after replacing column names if needed. (The original features names were kept as they are descriptive enough.)
+3) The train and test data are generated and combined using rbind
+4) Using the "grep" function, the mean and std columns were kept and other features were removed ([^F] was used to removed meanFrequency columns).
+5) A pipe line is created using 'dplyr' library to group the data by subject and activity then summarized by features mean.
+6) After confirming the tidiness of the data, it was saved to a txt format using "write.table". 
