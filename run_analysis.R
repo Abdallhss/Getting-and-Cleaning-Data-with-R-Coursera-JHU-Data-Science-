@@ -47,5 +47,5 @@ all = tbl_df(all)
 # create a pipe line to group the data and calcualte the mean
 all_mean <- all %>% group_by(Subject,Activity) %>%
     summarise_all(mean)
-# save the data to csv format
-write.csv(all_mean,file = "Human_Activity_Recognition_Tidy.csv")
+# save the data to txt format
+write.table(all_mean,file="Human_Activity_Recognition_Tidy.txt", row.names = FALSE)
